@@ -48,12 +48,14 @@ function makeList(target) {
     if (check_count >= 5) {
       target.checked = false;
     } else {
-      tag_list.push(target.value);
-      check_count++;
+      if (!tag_list.includes(target.value)) {
+        tag_list.push(target.value);
+        check_count = tag_list.length;
+      }
     }
   } else {
     tag_list = tag_list.filter(ele => ele != target.value);
-    check_count--;
+    check_count = tag_list.length;
   }
   for (let bit = 1 ; bit < (1<<check_count); bit++) {
     let result_list = [...op_list];
