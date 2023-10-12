@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css?date=202310130430">
+  <script src="main.js?date=202310130430"></script>
+  <title>アークナイツ公開求人シミュレータ</title>
+</head>
+<body onload="firstScript()">
+  <h2>入力</h2>
+  <input type="button" value="リセット" onclick="resetCheckBox()">
+  <h3>職業</h3>
+  <label for="vanguard">
+  <input type="checkbox" value="先鋒" id="vanguard" class="tag_checkbox" name="tag_checkbox">
+  <span>先鋒</span></label>
+  <label for="guard">
+  <input type="checkbox" value="前衛" id="guard" class="tag_checkbox" name="tag_checkbox">
+  <span>前衛</span></label>
+  <label for="defender">
+  <input type="checkbox" value="重装" id="defender" class="tag_checkbox" name="tag_checkbox">
+  <span>重装</span></label>
+  <label for="specialist">
+  <input type="checkbox" value="特殊" id="specialist" class="tag_checkbox" name="tag_checkbox">
+  <span>特殊</span></label>
+  <label for="sniper">
+  <input type="checkbox" value="狙撃" id="sniper" class="tag_checkbox" name="tag_checkbox">
+  <span>狙撃</span></label>
+  <label for="caster">
+  <input type="checkbox" value="術師" id="caster" class="tag_checkbox" name="tag_checkbox">
+  <span>術師</span></label>
+  <label for="medic">
+  <input type="checkbox" value="医療" id="medic" class="tag_checkbox" name="tag_checkbox">
+  <span>医療</span></label>
+  <label for="supporter">
+  <input type="checkbox" value="補助" id="supporter" class="tag_checkbox" name="tag_checkbox">
+  <span>補助</span></label>
+  <h3>レンジ</h3>
+  <label for="near">
+  <input type="checkbox" value="近距離" id="near" class="tag_checkbox" name="tag_checkbox">
+  <span>近距離</span></label>
+  <label for="far">
+  <input type="checkbox" value="遠距離" id="far" class="tag_checkbox" name="tag_checkbox">
+  <span>遠距離</span></label>
+  <h3>☆5以上確定タグ</h3>
+  <label for="high_elite">
+  <input type="checkbox" value="上級エリート" id="high_elite" class="tag_checkbox" name="tag_checkbox">
+  <span>上級エリート</span></label>
+  <label for="elite">
+  <input type="checkbox" value="エリート" id="elite" class="tag_checkbox" name="tag_checkbox">
+  <span>エリート</span></label>
+  <label for="crowd_control">
+  <input type="checkbox" value="牽制" id="crowd_control" class="tag_checkbox" name="tag_checkbox">
+  <span>牽制</span></label>
+  <label for="summon">
+  <input type="checkbox" value="召喚" id="summon" class="tag_checkbox" name="tag_checkbox">
+  <span>召喚</span></label>
+  <h3>☆4確定タグ</h3>
+  <label for="support">
+  <input type="checkbox" value="支援" id="support" class="tag_checkbox" name="tag_checkbox">
+  <span>支援</span></label>
+  <label for="debuff">
+  <input type="checkbox" value="弱化" id="debuff" class="tag_checkbox" name="tag_checkbox">
+  <span>弱化</span></label>
+  <label for="shift">
+  <input type="checkbox" value="強制移動" id="shift" class="tag_checkbox" name="tag_checkbox">
+  <span>強制移動</span></label>
+  <label for="fast_redeploy">
+  <input type="checkbox" value="高速再配置" id="fast_redeploy" class="tag_checkbox" name="tag_checkbox">
+  <span>高速再配置</span></label>
+  <label for="nuker">
+  <input type="checkbox" value="爆発力" id="nuker" class="tag_checkbox" name="tag_checkbox">
+  <span>爆発力</span></label>
+  <h3>その他</h3>
+  <label for="dps">
+  <input type="checkbox" value="火力" id="dps" class="tag_checkbox" name="tag_checkbox">
+  <span>火力</span></label>
+  <label for="survival">
+  <input type="checkbox" value="生存" id="survival" class="tag_checkbox" name="tag_checkbox">
+  <span>生存</span></label>
+  <label for="defense">
+  <input type="checkbox" value="防御" id="defense" class="tag_checkbox" name="tag_checkbox">
+  <span>防御</span></label>
+  <label for="healing">
+  <input type="checkbox" value="治療" id="healing" class="tag_checkbox" name="tag_checkbox">
+  <span>治療</span></label>
+  <label for="aoe">
+  <input type="checkbox" value="範囲攻撃" id="aoe" class="tag_checkbox" name="tag_checkbox">
+  <span>範囲攻撃</span></label>
+  <label for="slow">
+  <input type="checkbox" value="減速" id="slow" class="tag_checkbox" name="tag_checkbox">
+  <span>減速</span></label>
+  <label for="dp-recovery">
+  <input type="checkbox" value="COST回復" id="dp-recovery" class="tag_checkbox" name="tag_checkbox">
+  <span>COST回復</span></label>
+  <label for="robot">
+  <input type="checkbox" value="ロボット" id="robot" class="tag_checkbox" name="tag_checkbox">
+  <span>ロボット</span></label>
+  <div id="result">
+    <h2>結果</h2>
+    <lebel for="rare_check">
+    <input type="checkbox" id="rare_check" onchange="rareCheckChange()">
+    <span>☆3が出現する組み合わせを表示しない</span></lebel>
+    <div id="result_area">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+label input {
+  display: none;
+}
+
+label span {
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 3px;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+label input:checked + span {
+  color:#FFF;
+  background-color: #333333;
+
+}
