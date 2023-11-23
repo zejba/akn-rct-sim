@@ -10,7 +10,7 @@ function firstScript() {
 
 function generateOpList() {
   let csv = new XMLHttpRequest();
-  csv.open("GET", "op_list.csv?date=202310130430",false);
+  csv.open("GET", "op_list.csv?date=202311232345",false);
   csv.send(null);
   if (csv.status != 200) {
     return;
