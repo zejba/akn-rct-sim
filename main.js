@@ -66,6 +66,9 @@ function makeList(target) {
         result_list = result_list.filter(ele => ele.includes(tag_list[i],1));
       }
     }
+    if (ptn.length > 3) {
+      continue
+    }
     if (!ptn.includes("上級エリート")) {
       result_list = result_list.filter(ele => ele[2] != "6");
     }
